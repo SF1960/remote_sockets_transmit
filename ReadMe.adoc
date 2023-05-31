@@ -1,0 +1,61 @@
+:Author: ard12sgf1960
+:Email: steve.g.fuller@gmail.com
+:Date: 21/04/2023
+:Revision: version# 1.0
+:License: Public Domain
+
+= Project: {XIAO_ESP32C3_SOCKETS_apr21a}
+
+An Arduino IOT sketch to control 3 remote sockets via Xiao ESP32_C3, 3 x ESP32 Dev Boards and Arduino IOT and ESP_NOW
+
+== Step 1: Installation
+
+Installation:
+
+1. Load the receive sketch, ESP32_NOW_RECEIVE_WIFI.ino, to each ESP_32 board. Change the BOARD_ID Number to 1, 2 or 3
+2. Load the transmit sketch, XIAO_ESP32C3_SOCKETS_apr21a.ino, to the Xiao ESP32 C3
+3. Register the Xiao to Arduino IOT and follow their instruction to set up a new Device, Thing, Cloud Variables and Dashboard
+
+== Step 2: Assemble the circuit
+
+Assemble the circuit following the diagram layout.png attached to the sketch
+The power can come from USB of from Power Input to 5V
+
+== Step 3: Load the code
+
+Upload the code contained in this sketch on to your board
+
+=== Folder structure
+
+....
+ XIAO_ESP32C3_SOCKETS_apr21a              => Arduino sketch folder
+  ├── XIAO_ESP32C3_SOCKETS_apr21a.ino     => main Arduino file
+  ├── arduino.secrets.h                   => internet connection details
+  ├── thingProperties.h                   => Arduino library file 
+  └── ReadMe.adoc                         => this file
+....
+
+=== License
+This project is released under a {License} License.
+
+=== Contributing
+To contribute to this project please contact: 
+
+=== BOM
+Add the bill of the materials you need for this project.
+
+|===
+| ID | Part name          | Part number | Quantity
+| R1 | 220 Ohm Resistor   | 1234-abcd   | 3       
+| L1 | Green LED          | 2345-asdf   | 1
+| L2 | Yellow LED         | 2345-asdf   | 1   
+| L3 | Blue LED           | 2345-asdf   | 1    
+| A1 | Xiao ESP32 C3      | ABX00066    | 1  
+| A2 | ESP32 Dev Board    | 2345-asdf   | 3     
+|===
+
+
+=== Help
+This document is written in the _AsciiDoc_ format, a markup language to describe documents. 
+If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
+or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
