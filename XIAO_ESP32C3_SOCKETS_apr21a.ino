@@ -1,11 +1,7 @@
-#include "arduino_secrets.h"
-/* DEBUG CODE
-
-Date Time:  230502 20:16
-Issue:      To try and correct the probelm where the Sockets turn off a few seconds after turning them on
-Change:     Changed the OnSocketChange code fron (Socket_1) to (!Socket_1)
-Result:     fault was opposite to original and still a fault
-
+/* Revision History
+*
+* 1.0 Original Working Version
+*
 */
 
 /* 
@@ -58,6 +54,7 @@ Result:     fault was opposite to original and still a fault
   #define debug_println(x)
 #endif
 
+#include "arduino_secrets.h"                         // Internet and controller details
 #include "thingProperties.h"                         // library handled by Arduino IOT
 #include <esp_now.h>                                 // ESP_NOW library
 #include <WiFi.h>                                    // WiFi library
@@ -79,7 +76,7 @@ char result;                                         // result of send
 
 // Set up MAC addresses for socket controllers
 uint8_t broadcastAddress_1[] = {0x7C, 0x87, 0xCE, 0x30, 0x8D, 0x0C}; // ESP32 #14 socket 1
-uint8_t broadcastAddress_2[] = {0x7C, 0x87, 0xCE, 0x2E, 0x1C, 0x04}; // ESP32 #15 socket 2
+uint8_t broadcastAddress_2[] = {0x94, 0xB5, 0x55, 0xF8, 0x30, 0x70}; // ESP32 #8  socket 2 94:B5:55:F8:30:70
 uint8_t broadcastAddress_3[] = {0x7C, 0x87, 0xCE, 0x30, 0x91, 0xCC}; // ESP32 #16 socket 3
 
 // Define a data structure to transmit;
